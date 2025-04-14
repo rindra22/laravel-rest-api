@@ -28,7 +28,7 @@ $factory->define(\Jejookit\RestAPI\Tests\Models\DummyPost::class,
     function(Faker\Generator $faker)
     {
         $createFactory = \Illuminate\Database\Eloquent\Factory::construct(\Faker\Factory::create(),
-            base_path() . '/laravel-rest-api/tests/Factories');
+            base_path() . '/jejookit-rest-api/tests/Factories');
         return [
             'post' => $faker->company,
             'user_id' => \Jejookit\RestAPI\Tests\Models\DummyUser::all()->random()->id,
@@ -40,7 +40,7 @@ $factory->define(\Jejookit\RestAPI\Tests\Models\DummyComment::class,
     function(Faker\Generator $faker)
     {
         $createFactory = \Illuminate\Database\Eloquent\Factory::construct(\Faker\Factory::create(),
-            base_path() . '/laravel-rest-api/tests/Factories');
+            base_path() . '/jejookit-rest-api/tests/Factories');
         return [
             'comment' => $faker->text,
             'user_id' => \Jejookit\RestAPI\Tests\Models\DummyUser::all()->random()->id,

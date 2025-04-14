@@ -69,7 +69,7 @@ class DummyUserTest extends TestCase
     public function testUserIndexWithFilters()
     {
         $createFactory = \Illuminate\Database\Eloquent\Factory::construct(\Faker\Factory::create(),
-            base_path() . '/laravel-rest-api/tests/Factories');
+            base_path() . '/jejookit-rest-api/tests/Factories');
 
         $userId = $createFactory->of(\Jejookit\RestAPI\Tests\Models\DummyUser::class)->create();
 
@@ -134,7 +134,7 @@ class DummyUserTest extends TestCase
         $post = \Jejookit\RestAPI\Tests\Models\DummyPost::all()->random();
 
         $createFactory = \Illuminate\Database\Eloquent\Factory::construct(\Faker\Factory::create(),
-            base_path() . '/laravel-rest-api/tests/Factories');
+            base_path() . '/jejookit-rest-api/tests/Factories');
 
         $comment = $createFactory->of(\Jejookit\RestAPI\Tests\Models\DummyComment::class)->create([
             'comment' => "Dummy Comments",
@@ -156,7 +156,7 @@ class DummyUserTest extends TestCase
         $user = \Jejookit\RestAPI\Tests\Models\DummyUser::all()->random();
 
         $createFactory = \Illuminate\Database\Eloquent\Factory::construct(\Faker\Factory::create(),
-            base_path() . '/laravel-rest-api/tests/Factories');
+            base_path() . '/jejookit-rest-api/tests/Factories');
 
         $createFactory->of(\Jejookit\RestAPI\Tests\Models\DummyPost::class)->create([
             'post' => "dummy POst",

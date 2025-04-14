@@ -1,5 +1,5 @@
 {
-    "name": "jejookit/laravel-rest-api",
+    "name": "jejookit/jejookit-rest-api",
     "description": "Powerful RestAPI plugin for Laravel framework",
     "type": "library",
     "require": {

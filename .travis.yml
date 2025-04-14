@@ -20,13 +20,13 @@ install:
   - export DB_USERNAME="root"
   - export DB_PASSWORD=""
   #specify the package to test
-  - export PACKAGE_NAME=Jejookit/laravel-rest-api
+  - export PACKAGE_NAME=Jejookit/jejookit-rest-api
   #run the setup script
-  - curl -s https://raw.githubusercontent.com/Jejookit/laravel-rest-api/master/setup.sh | bash
+  - curl -s https://raw.githubusercontent.com/Jejookit/jejookit-rest-api/master/setup.sh | bash
   - mysql -e 'create database homestead_test;'
 
 services: mysql
 
 script:
-  - cd laravel/laravel-rest-api
+  - cd laravel/jejookit-rest-api
   - ../vendor/bin/phpunit

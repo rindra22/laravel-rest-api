@@ -70,7 +70,7 @@ class  TestCase extends \Illuminate\Foundation\Testing\TestCase
     public function seedDummyData()
     {
         $factory = \Illuminate\Database\Eloquent\Factory::construct(\Faker\Factory::create(),
-            base_path() . '/laravel-rest-api/tests/Factories');
+            base_path() . '/jejookit-rest-api/tests/Factories');
         \DB::beginTransaction();
 
         for($i = 0; $i < 10; $i++)

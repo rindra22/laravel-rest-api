@@ -21,16 +21,16 @@ if [ ! -f "laravel/composer.json" ] ; then
 
     php -r "
         \$arr = json_decode(file_get_contents(\"composer.json\"), true);
-        \$arr[\"autoload\"][\"psr-4\"][\"Jejookit\\\\RestAPI\\\\\"] = \"laravel-rest-api/src\";
-        \$arr[\"autoload\"][\"psr-4\"][\"Jejookit\\\\RestAPI\\\\Tests\\\\\"] = \"laravel-rest-api/tests\";
+        \$arr[\"autoload\"][\"psr-4\"][\"Jejookit\\\\RestAPI\\\\\"] = \"jejookit-rest-api/src\";
+        \$arr[\"autoload\"][\"psr-4\"][\"Jejookit\\\\RestAPI\\\\Tests\\\\\"] = \"jejookit-rest-api/tests\";
         file_put_contents(\"composer.json\", json_encode(\$arr));
     "
 else
     cd laravel || exit
 fi
 
-rm -rf laravel-rest-api
-git clone https://github.com/Jejookit/laravel-rest-api
+rm -rf jejookit-rest-api
+git clone https://github.com/Jejookit/jejookit-rest-api
 git checkout master
 composer du
 cd .. || exit
